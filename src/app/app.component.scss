@@ -1,61 +1,43 @@
 @media only screen and (max-width: 600px) {
 
-    .ongoing-projects,
-    .upcoming-projects {
-        width: 90% !important;
-        margin: auto !important;
-        margin-bottom: 24px !important;
-        margin-top: 24px !important;
-    }
-
     .main-title {
         font-size: 34px !important;
-        font-family: fantasy !important;
+        font-family: inherit !important;
     }
 
     .typewriter-text {
-        font-family: fantasy !important;
+        font-family: inherit !important;
         font-size: 5vw !important;
     }
 }
 
-.header-outer {
-    .header-video {
-        background-color: #252525;
-        position: relative;
+.video-outer {
+    background-color: #252525;
+    position: relative;
 
-        .overlay-desc {
-            background: rgba(0, 0, 0, 0);
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-
-            .title {
-                font-family: fantasy;
-            }
-        }
+    .overlay-desc {
+        background: rgba(0, 0, 0, 0);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
         .main-title {
             color: white;
-            font-family: fantasy;
+            font-family: inherit;
             font-size: 5vw;
             text-align: center;
         }
-
-        h2 {
-            color: #FFF;
-        }
-
     }
 }
 
-.top_nav {
+
+.top-nav {
     background: #ffcb0f none repeat scroll 0 0;
     overflow: hidden;
     padding: 10px 0;
@@ -72,7 +54,7 @@
 
         a {
             color: #222;
-            font-family: 'futura_ltbook', sans-serif;
+            font-family: inherit;
         }
 
         li {
@@ -86,7 +68,6 @@
     }
 
     .list-inline.social_icon {
-        // float: right;
         margin: 0;
         font-size: 24px;
         position: absolute;
@@ -95,7 +76,7 @@
 
         a {
             color: #222;
-            font-family: 'futura_ltbook', sans-serif;
+            font-family: inherit;
         }
     }
 
@@ -117,32 +98,39 @@
 }
 
 .site-footer {
-    background-color: #26272b;
+    background-color: #fafafa;
     padding: 45px 0 20px;
     font-size: 15px;
     line-height: 24px;
-    color: #FFF;
+    color: black;
 }
 
-//service area
+//service area start
+.section-title {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    &.work-of-excellence {
+        margin-top: 30px;
+    }
+}
+
+.section-sub-title {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 46px;
+    margin: 0 0 60px;
+    color: #212121;
+
+    &.recent-project {
+        margin: 0 0 30px;
+    }
+}
 
 .ts-service-area {
-    .section-title {
-        font-size: 18px;
-        line-height: 28px;
-        margin: 0;
-        text-transform: uppercase;
-        font-weight: 300;
-    }
-
-    .section-sub-title {
-        font-weight: 900;
-        font-size: 36px;
-        line-height: 46px;
-        margin: 0 0 60px;
-        color: #212121;
-    }
-
     .service-center-img {
         display: block;
         max-width: 100%;
@@ -170,6 +158,8 @@
     }
 
 }
+
+//service area end
 
 .facts-area {
     padding: 70px 0;
@@ -200,15 +190,6 @@
     }
 }
 
-.ongoing-projects,
-.upcoming-projects {
-    width: 50%;
-    margin: auto;
-}
-
-
-
-
 .scroll-to-top {
     position: fixed;
     bottom: 15px;
@@ -230,13 +211,9 @@
     transition: all .2s ease-in-out;
 }
 
-
-.carousel-inner img {
-    width: 100%;
-    height: 100%;
-}
-
-.typewriter {
+.typewriter h1 {
+    color: #fff;
+    font-family: cursive;
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange;
@@ -248,15 +225,8 @@
     letter-spacing: .15em;
     /* Adjust as needed */
     animation:
-        typing 3.5s steps(40, end),
-        blink-caret .75s step-end infinite;
-
-    .typewriter-text {
-        color: white;
-        font-family: fantasy;
-        font-size: 3vw;
-        text-align: center;
-    }
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
 }
 
 /* The typing effect */
@@ -266,7 +236,7 @@
     }
 
     to {
-        width: 38%
+        width: 100%
     }
 }
 
@@ -279,6 +249,85 @@
     }
 
     50% {
-        border-color: orange;
+        border-color: orange
+    }
+}
+
+.copy-right {
+    display: flex;
+    justify-content: center;
+}
+
+.card-body {
+    display: block;
+    text-align: center;
+}
+
+
+
+
+.masonry {
+    /* Masonry container */
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
+    column-gap: 1em;
+    margin: 1.5em;
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+}
+
+.item {
+    display: inline-block;
+    background: #fff;
+    padding: 1em;
+    margin: 0 0 1.5em;
+    width: 100%;
+    -webkit-transition: 1s ease all;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 2px 2px 4px 0 #ccc;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 320px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .masonry {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
     }
 }

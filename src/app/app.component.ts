@@ -67,7 +67,6 @@ export class AppComponent {
   ]
 
   constructor(private viewportScroller: ViewportScroller, @Inject(DOCUMENT) private document: Document) {
-
   }
 
   @HostListener("window:scroll", [])
@@ -98,7 +97,5 @@ export class AppComponent {
         this.ongoingProjects[i]['isActive'] = false;
       }
     })
-
   }
-
 }
