@@ -31,6 +31,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#ts-service-area">Services</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ongoing-projects">Ongoing Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#upcoming-projects">Upcoming Projects</a>
+        </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>
         </li> -->
@@ -159,49 +165,74 @@
   <!--/ Container end -->
 </section>
 
-<!-- Ongoing Projects Start -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 py-3">
-      <h2 class="pb-2 pt-4 text-center ongoing-project-title">Ongoing Projects</h2>
-      <ngb-carousel>
-        <ng-template ngbSlide *ngFor="let ongoingProject of ongoingProjects">
-          <div class="polaroid">
-            <img [src]="ongoingProject.url" alt="Random slide">
-            <!-- <div class="container">
-              <a [href]="ongoingProject.viewMore">View More</a>
-            </div> -->
-          </div>
-        </ng-template>
-      </ngb-carousel>
+
+<section id="ongoing-projects" class="ongoing-projects">
+  <h3>Ongoing Projects</h3>
+  <div id="op" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#op" data-slide-to="0" class="active"></li>
+      <li data-target="#op" data-slide-to="1"></li>
+      <li data-target="#op" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../assets/images/ongoing-project-images/op1.jpg" alt="Los Angeles" width="1100" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/ongoing-project-images/op2.jpg" alt="Chicago" width="1100" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/ongoing-project-images/op3.jpg" alt="New York" width="1100" height="500">
+      </div>
     </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#op" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#op" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
   </div>
-</div>
-<!-- Ongoing Projects End -->
+</section>
 
+<section id="upcoming-projects" class="upcoming-projects mt-4 mb-4">
+  <h3>Upcoming Projects</h3>
+  <div id="cp" class="carousel slide" data-ride="carousel">
 
-<!-- Completed Projects Start -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 py-3">
-      <h2 class="pb-2 pt-4 text-center ongoing-project-title">Completed Projects</h2>
-      <ngb-carousel>
-        <ng-template ngbSlide *ngFor="let completedProject of completedProjects">
-          <div class="polaroid">
-            <img [src]="completedProject.url" alt="No Image">
-            <!-- <div class="container">
-              <a [href]="completedProject.viewMore">View More</a>
-            </div> -->
-          </div>
-        </ng-template>
-      </ngb-carousel>
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#cp" data-slide-to="0" class="active"></li>
+      <li data-target="#cp" data-slide-to="1"></li>
+      <li data-target="#cp" data-slide-to="2"></li>
+    </ul>
+
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../assets/images/completed-project-images/cp1.jpg" alt="Los Angeles" width="1100" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/completed-project-images/cp2.jpg" alt="Chicago" width="1100" height="500">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/completed-project-images/cp3.jpg" alt="New York" width="1100" height="500">
+      </div>
     </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#cp" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#cp" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
   </div>
-</div>
-<!-- Completed Projects End -->
-
-
-
+</section>
 
 
 <!-- Site footer -->

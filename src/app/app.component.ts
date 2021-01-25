@@ -28,12 +28,12 @@ export class AppComponent {
     },
     {
       url: '../assets/images/ongoing-project-images/op4.jpg',
-      altText: 'Third Slide',
+      altText: 'Forth Slide',
       viewMore: ''
     },
     {
       url: '../assets/images/ongoing-project-images/op5.jpg',
-      altText: 'Third Slide',
+      altText: 'Fifth Slide',
       viewMore: ''
     }
   ]
@@ -87,6 +87,18 @@ export class AppComponent {
         window.scrollTo(0, currentScroll - (currentScroll));
       }
     })();
+  }
+
+  applyNext(i) {
+    this.ongoingProjects.forEach((v, k) => {
+      v['isActive'] = false;
+      if (k == i) {
+        this.ongoingProjects[i]['isActive'] = true;
+      } else {
+        this.ongoingProjects[i]['isActive'] = false;
+      }
+    })
+
   }
 
 }
