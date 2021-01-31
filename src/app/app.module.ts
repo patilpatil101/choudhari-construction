@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnimatedDigitComponent } from './animated-digit/animated-digit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GallaryComponent } from './gallary/gallary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AnimatedDigitComponent
+    AnimatedDigitComponent,
+    GallaryComponent
   ],
   imports: [
     BrowserModule,

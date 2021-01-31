@@ -88,14 +88,4 @@ export class AppComponent {
     })();
   }
 
-  applyNext(i) {
-    this.ongoingProjects.forEach((v, k) => {
-      v['isActive'] = false;
-      if (k == i) {
-        this.ongoingProjects[i]['isActive'] = true;
-      } else {
-        this.ongoingProjects[i]['isActive'] = false;
-      }
-    })
-  }
 }

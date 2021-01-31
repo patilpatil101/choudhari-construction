@@ -12,7 +12,7 @@
 }
 
 .video-outer {
-    background-color: #252525;
+    background-color: rgb(51 51 51);
     position: relative;
 
     .overlay-desc {
@@ -98,14 +98,19 @@
 }
 
 .site-footer {
-    background-color: #fafafa;
+    background-color: #f2f2f2;
+    color: #999;
     padding: 45px 0 20px;
     font-size: 15px;
     line-height: 24px;
-    color: black;
+    .about-text, .address, .copyright-text{
+        color: #797979;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
 }
 
-//service area start
 .section-title {
     font-size: 18px;
     line-height: 28px;
@@ -119,12 +124,13 @@
 }
 
 .section-sub-title {
-    font-weight: 900;
-    font-size: 36px;
-    line-height: 46px;
-    margin: 0 0 60px;
-    color: #212121;
-
+    color: #333333;
+    margin: 0 auto 27px;
+    text-align: center;
+    font-size: 52px;
+    line-height: 1.2307692308;
+    font-weight: 200;
+    letter-spacing: normal;
     &.recent-project {
         margin: 0 0 30px;
     }
@@ -140,14 +146,21 @@
     .ts-service-box .ts-service-box-info {
         margin-left: 90px;
         margin-bottom: 40px;
-
+        p{
+            color: #797979;
+            font-size: 14px;
+            font-weight: 300;
+        }
         .service-box-title {
             font-size: 16px;
             margin: 0 0 10px;
+           
         }
 
         .service-box-title a {
-            color: #333;
+            color: #666;
+            font-weight: 200;
+            font-size: 20px;
             text-transform: uppercase;
         }
 
@@ -159,13 +172,11 @@
 
 }
 
-//service area end
-
 .facts-area {
     padding: 70px 0;
 
     &.dark-bg {
-        background: #252525;
+        background: rgb(51 51 51);
         color: #fff;
     }
 
@@ -215,21 +226,15 @@
     color: #fff;
     font-family: cursive;
     overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange;
-    /* The typwriter cursor */
     white-space: nowrap;
-    /* Keeps the content on a single line */
     margin: 0 auto;
-    /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em;
-    /* Adjust as needed */
     animation:
         typing 3.5s steps(30, end),
         blink-caret .5s step-end infinite;
 }
 
-/* The typing effect */
 @keyframes typing {
     from {
         width: 0
@@ -240,7 +245,6 @@
     }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
 
     from,
@@ -256,78 +260,15 @@
 .copy-right {
     display: flex;
     justify-content: center;
+    
 }
-
+a{
+    color:#0088cc;
+}
+h6{
+    color: #666;font-weight: 200; font-size: 26px;
+}
 .card-body {
     display: block;
     text-align: center;
-}
-
-
-
-
-.masonry {
-    /* Masonry container */
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
-    column-count: 4;
-    -webkit-column-gap: 1em;
-    -moz-column-gap: 1em;
-    column-gap: 1em;
-    margin: 1.5em;
-    padding: 0;
-    -moz-column-gap: 1.5em;
-    -webkit-column-gap: 1.5em;
-    column-gap: 1.5em;
-    font-size: .85em;
-}
-
-.item {
-    display: inline-block;
-    background: #fff;
-    padding: 1em;
-    margin: 0 0 1.5em;
-    width: 100%;
-    -webkit-transition: 1s ease all;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-shadow: 2px 2px 4px 0 #ccc;
-}
-
-.item img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media only screen and (max-width: 320px) {
-    .masonry {
-        -moz-column-count: 1;
-        -webkit-column-count: 1;
-        column-count: 1;
-    }
-}
-
-@media only screen and (min-width: 321px) and (max-width: 768px) {
-    .masonry {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
-    }
-}
-
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
-    .masonry {
-        -moz-column-count: 3;
-        -webkit-column-count: 3;
-        column-count: 3;
-    }
-}
-
-@media only screen and (min-width: 1201px) {
-    .masonry {
-        -moz-column-count: 4;
-        -webkit-column-count: 4;
-        column-count: 4;
-    }
 }
