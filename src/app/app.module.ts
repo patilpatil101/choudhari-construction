@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { AnimatedDigitComponent } from './animated-digit/animated-digit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GallaryComponent } from './gallary/gallary.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnimatedDigitComponent,
-    GallaryComponent
+    GallaryComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

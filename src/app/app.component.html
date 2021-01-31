@@ -2,7 +2,7 @@
   <div class="top-nav">
     <div class="container m-0 p-0">
       <ul class="list-inline info">
-        <li><span class="fa fa-phone"></span> +91 8788278913 / 9404723408</li>
+        <li><span class="fa fa-phone"></span> 8788278913 / 9404723408</li>
         <li><span class="fa fa-envelope"></span> akshaychoice@gmail.com</li>
         <li><span class="fa fa-clock-o"></span> Mon - Sat 9:00 - 21:00 </li>
       </ul>
@@ -22,9 +22,6 @@
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="#footer">About Us</a>
         </li>
@@ -34,172 +31,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#recent-projects">Recent Projects</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li> -->
       </ul>
     </div>
   </nav>
 </header>
+<router-outlet></router-outlet>
 
-<div class="video-outer">
-  <video [muted]="true" autoplay playsinline loop width="100%">
-    <source src="../assets/videos/choudhari-construction.mp4" type="video/mp4">
-  </video>
-  <div class="overlay-desc">
-    <h1 class="main-title">Choudhari Construction</h1>
-    <div class="typewriter">
-      <h1 class="typewriter-text">You Dream it, We Build it.</h1>
-    </div>
-  </div>
-</div>
-
-<section id="facts" class="facts-area dark-bg">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-sm-6 ts-facts pb-4">
-        <div class="ts-facts-img">
-          <img src="../assets/images/icon-image/fact1.png" alt="">
-        </div>
-        <div class="ts-facts-content">
-          <animated-digit [digit]="53" [duration]="1000"></animated-digit>
-          <h3 class="ts-facts-title">Total Projects</h3>
-        </div>
-      </div>
-
-      <div class="col-sm-6 ts-facts">
-        <div class="ts-facts-img">
-          <img src="../assets/images/icon-image/fact2.png" alt="">
-        </div>
-        <div class="ts-facts-content">
-          <animated-digit [digit]="64" [duration]="1000"></animated-digit>
-          <h3 class="ts-facts-title">Happy Customers</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="ts-service-area" class="ts-service-area">
-  <div class="container pt-4">
-    <div class="text-center">
-      <h2 class="section-title">We Are Specialists In</h2>
-      <h3 class="section-sub-title">What We Do</h3>
-    </div>
-    <!--/ Title row end -->
-
-    <div class="row">
-      <div class="col-md-4">
-        <div class="ts-service-box">
-          <div class="ts-service-box-img pull-left">
-            <img src="../assets/images/icon-image/service-icon1.png" alt="">
-          </div>
-          <div class="ts-service-box-info">
-            <h3 class="service-box-title"><a href="#">Planning & Estimate</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
-          </div>
-        </div><!-- Service 1 end -->
-
-        <div class="ts-service-box">
-          <div class="ts-service-box-img pull-left">
-            <img src="../assets/images/icon-image/service-icon2.png" alt="">
-          </div>
-          <div class="ts-service-box-info">
-            <h3 class="service-box-title"><a href="#">3D Views</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
-          </div>
-        </div><!-- Service 2 end -->
-
-        <div class="ts-service-box">
-          <div class="ts-service-box-img pull-left">
-            <img src="../assets/images/icon-image/service-icon3.png" alt="">
-          </div>
-          <div class="ts-service-box-info">
-            <h3 class="service-box-title"><a href="#">RCC Design</a></h3>
-            <p>Reinforced concrete (RC), also called reinforced cement concrete (RCC), is a composite material in which concrete's relatively low tensile strength and ductility are compensated for by the inclusion of reinforcement having higher tensile strength or ductility.</p>
-          </div>
-        </div><!-- Service 3 end -->
-
-      </div><!-- Col end -->
-
-      <div class="col-md-4 text-center pb-4">
-        <img class="service-center-img img-responsive" src="../assets/images/service-center.jpg" alt="">
-      </div><!-- Col end -->
-
-      <div class="col-md-4">
-        <div class="ts-service-box">
-          <div class="ts-service-box-img pull-left">
-            <img src="../assets/images/icon-image/service-icon4.png" alt="">
-          </div>
-          <div class="ts-service-box-info">
-            <h3 class="service-box-title"><a href="#">Supervision & Quality Control</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
-          </div>
-        </div><!-- Service 4 end -->
-
-        <div class="ts-service-box">
-          <div class="ts-service-box-img pull-left">
-            <img src="../assets/images/icon-image/service-icon5.png" alt="">
-          </div>
-          <div class="ts-service-box-info">
-            <h3 class="service-box-title"><a href="#">Contractors</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
-          </div>
-        </div><!-- Service 5 end -->
-
-        <div class="ts-service-box">
-          <div class="ts-service-box-img pull-left">
-            <img src="../assets/images/icon-image/service-icon6.png" alt="">
-          </div>
-          <div class="ts-service-box-info">
-            <h3 class="service-box-title"><a href="#">Safety Management</a></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
-          </div>
-        </div><!-- Service 6 end -->
-      </div><!-- Col end -->
-    </div><!-- Content row end -->
-
-  </div>
-  <!--/ Container end -->
-</section>
-
-<div id="recent-projects" class="container projects mb-4">
-  <div class="text-center">
-    <h2 class="section-title work-of-excellence">WORK OF EXCELLENCE</h2>
-    <h3 class="section-sub-title recent-project">RECENT PROJECTS</h3>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card">
-        <img class="card-img-top" src="../assets/images/completed-project-images/cp3.jpg" alt="Bologna">
-        <div class="card-body">
-          <h6 class="card-subtitle mb-2 text-muted">Completed Projects</h6>
-          <a routerLink="/gallary" routerLinkActive="active" class="card-link">View More</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <img class="card-img-top" src="../assets/images/completed-project-images/cp4.jpg" alt="Bologna">
-        <div class="card-body">
-          <h6 class="card-subtitle mb-2 text-muted">Ongoing Projects</h6>
-          <a href="#" class="card-link">View More</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="card">
-        <img class="card-img-top" src="../assets/images/completed-project-images/cp3.jpg" alt="Bologna">
-        <div class="card-body">
-          <h6 class="card-subtitle mb-2 text-muted">Upcoming Projects</h6>
-          <a href="#" class="card-link">View More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Site footer -->
 <footer class="site-footer" id="footer">
   <div class="container">
     <div class="row">
@@ -213,26 +50,8 @@
       <div class="col-xs-6 col-md-3">
         <h6>Address</h6>
         <div class="address">Choudhari Construction, Narkhede Complex, Malkapur, Dist. Buldhana, 443101</div>
-        <!-- <ul class="footer-links">
-          <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-          <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-          <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-          <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-          <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-          <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-        </ul> -->
       </div>
-
-      <!-- <div class="col-xs-6 col-md-3">
-        <h6>Quick Links</h6>
-        <ul class="footer-links">
-          <li><a href="http://scanfcode.com/about/">About Us</a></li>
-          <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-          <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-          <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-        </ul>
-      </div> -->
+      
     </div>
     <hr>
   </div>
@@ -248,5 +67,3 @@
     <i class="fa fa-chevron-up"></i>
   </button>
 </div>
-
-<router-outlet></router-outlet>

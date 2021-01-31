@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GallaryComponent } from './gallary/gallary.component';
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
-  { path: 'gallary', component: GallaryComponent }
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'gallary/:id', component: GallaryComponent }
 ];
 
 @NgModule({
