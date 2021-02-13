@@ -11,10 +11,11 @@
     }
 }
 
-.video-outer {
-    background-color: rgb(51 51 51);
+.index-image{
     position: relative;
-
+    img{
+        width: 100%;
+    }
     .overlay-desc {
         background: rgba(0, 0, 0, 0);
         position: absolute;
