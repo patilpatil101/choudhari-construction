@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 html {
     scroll-behavior: smooth;
+    height: 100vh;
+}
+
+@for $i from 1 through 30 {
+    .fs-#{$i} {
+      font-size: $i + px;
+    }
+}
+.cp{
+    cursor: pointer;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.green{
+    color: #3bab3b;
 }

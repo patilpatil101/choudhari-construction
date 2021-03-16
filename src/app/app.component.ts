@@ -1,17 +1,29 @@
-import { DOCUMENT, ViewportScroller } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [HttpClient]
 })
 export class AppComponent {
   title = 'choudhari-construction';
   windowScrolled: boolean = false;
+  sendEmailForm: FormGroup;
+  message: string;
 
-  constructor(private viewportScroller: ViewportScroller, @Inject(DOCUMENT) private document: Document) {
-   
+  constructor(@Inject(DOCUMENT) private document: Document, public http: HttpClient, private fb: FormBuilder) {
+    
+    this.sendEmailForm = this.fb.group({
+      name: ['', [Validators.required]],
+      email: [''],
+      message: ['', [Validators.required]],
+      telephone: ['', [Validators.required]]
+    });
+
   }
 
   @HostListener("window:scroll", [])
@@ -33,4 +45,21 @@ export class AppComponent {
     })();
   }
 
+  onSubmit(contactForm) {
+    if (contactForm.valid) {
+      const {name, email, message, telephone} = contactForm.value;
+      const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+      this.http.post('https://formspree.io/f/xaylrvdk',
+        { name: name, replyto: email, message: message, telephone: telephone },
+        { 'headers': headers }).subscribe(response => {
+            if (Object.entries(response).length > 0 && response['ok'] == true) {
+              this.message = "Email sent successfully!"
+              setTimeout(() => {
+                this.message = undefined;
+              },5000)
+            }
+          }
+        );
+    }
+  }
 }

@@ -13,8 +13,13 @@
 
 .index-image{
     position: relative;
-    img{
+    .main-image{
         width: 100%;
+        background: url('../../assets/images/index/img2.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height:700px;
+        background-position: top;
     }
     .overlay-desc {
         background: rgba(0, 0, 0, 0);
@@ -33,6 +38,15 @@
             font-family: inherit;
             font-size: 5vw;
             text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .index-image {
+        .main-image{
+            height: 350px;
         }
     }
 }
