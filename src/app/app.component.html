@@ -2,9 +2,9 @@
   <div class="top-nav">
     <div class="container m-0 p-0">
       <ul class="list-inline info">
-        <li><span class="fa fa-phone"></span> 8788278913 / 9404723408</li>
+        <li><span class="fa fa-phone"></span> 9404723408 / 8788278913 </li>
         <li><span class="fa fa-envelope"></span> akshaychoice@gmail.com</li>
-        <li><span class="fa fa-clock-o"></span> Mon - Sat 9:00 - 21:00 </li>
+        <!-- <li><span class="fa fa-clock-o"></span> Mon - Sat 9:00 - 21:00 </li> -->
       </ul>
       <ul class="list-inline social_icon">
         <li><span class="fa fa-facebook"></span></li>
@@ -15,15 +15,15 @@
     </div>
   </div>
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">Choudhari Construction</a>
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <div class="brand-logo lazyload"></div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#footer">About Us</a>
+          <a class="nav-link" href="#about-us">About Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#ts-service-area">Services</a>
@@ -40,10 +40,10 @@
 </header>
 <router-outlet></router-outlet>
 
-<footer class="site-footer" id="footer">
+<footer class="site-footer">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-6">
+      <div class="col-sm-12 col-md-6" id="about-us">
         <h6>About Us</h6>
         <p class="text-justify about-text">
           Choudhari Construction is a specialist engineering services & solutions company servicing clients across a range of engineering segments helping improve their engineering efficiency, support their global footprint and improve their competitiveness. Leveraging technology, domain knowledge, & our robust work planning methodology to ensure an effective global delivery model for engineering services projects, we have emerged as a partner-of-choice for leading international companies. Our engineering teams seamlessly integrate into our client's in-house engineering / product development team & environment and act as a virtual extension of their engineering enterprise. The company is headquartered in Malkapur (India), which is considered the “Engineering valley of India” and services clients across Buldhana, Akola, Nandura, & many more through it’s local offices.
@@ -55,7 +55,7 @@
         <div class="address">Choudhari Construction, Narkhede Complex, Malkapur, Dist. Buldhana, 443101</div>
       </div>
 
-      <div class="col-xs-6 col-md-3">
+      <div class="col-xs-6 col-md-3" data-aos="zoom-in">
         <h6>Contact Us</h6>
         <form [formGroup]="sendEmailForm" (ngSubmit)="onSubmit(sendEmailForm)">
           <div class="form-group">
@@ -73,12 +73,11 @@
             <input type="submit" class="btn btn-primary btn-lg btn-block" value="Send">
            <div class="center green pt-2" *ngIf="message">{{message}}</div>
         </form>
-         
       </div>
     </div>
     <hr>
   </div>
-  <div class="container copy-right">
+  <div class="container copy-right" id="footer">
     <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
       <a href="#">Choudhari Construction</a>.
     </p>

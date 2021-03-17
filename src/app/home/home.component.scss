@@ -20,9 +20,9 @@
         background-repeat: no-repeat;
         height:700px;
         background-position: top;
+        font-weight: 800;
     }
     .overlay-desc {
-        background: rgba(0, 0, 0, 0);
         position: absolute;
         top: 0;
         right: 0;
@@ -32,13 +32,25 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+       
 
         .main-title {
             color: white;
             font-family: inherit;
-            font-size: 5vw;
+            font-size: 62px;
             text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
         }
+    }
+    .index-image-overlay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #040e26;
+        opacity: 0.5;
     }
 }
 
@@ -99,7 +111,7 @@
 
         .service-box-title a {
             color: #565555;
-            font-weight: 200;
+            font-weight: bold;
             font-size: 20px;
             text-transform: uppercase;
         }
@@ -141,11 +153,8 @@
     }
 }
 
-
-
 .typewriter h1 {
     color: #fff;
-    font-family: cursive;
     overflow: hidden;
     border-right: .15em solid orange;
     white-space: nowrap;

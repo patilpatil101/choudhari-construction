@@ -52,12 +52,46 @@
 }
 
 .navbar {
+    background-color: #201e1f;
     .nav-link {
         color: #fff
     }
 
     .nav-link:hover {
         color: #aaaaaa
+    }
+
+    .brand-logo{
+        background: url('../assets/images/brand-logo/index-logo.jpeg');
+        width: 120px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 120px;
+        background-position: top;
+        font-weight: 800;
+        position: absolute;
+        right: 18px;
+        z-index: 2;
+        top: 20px;
+        border: 1px solid #ffcb0f;
+        animation: MoveUpDown 2.3s linear infinite;
+    }
+      @keyframes MoveUpDown {
+        0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+      }
+}
+
+@media only screen and (max-width: 767px) {
+    .brand-logo{
+        height: 100px !important;
+        width: 100px !important;
+        // animation: unset;
+        // top: 8px;
     }
 }
 
@@ -72,7 +106,11 @@
         font-size: 12px;
         font-weight: 300;
     }
-
+    h6{
+        color: #1d1d1f;
+        font-weight: 600;
+        font-size: 14px;
+    }
 }
 
 .scroll-to-top {
