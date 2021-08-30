@@ -54,6 +54,7 @@ export class AppComponent {
         { 'headers': headers }).subscribe(response => {
             if (Object.entries(response).length > 0 && response['ok'] == true) {
               this.message = "Email sent successfully!"
+              contactForm.reset();
               setTimeout(() => {
                 this.message = undefined;
               },5000)
